@@ -7,11 +7,9 @@
 
 using namespace std;
 
-void cypherLocation(string, word)
+void getWord()
 {
-    int character
-    int cyberlocation
-    int 
+    
     vector<char> charVector({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
     string text;
     string outPut = "";
