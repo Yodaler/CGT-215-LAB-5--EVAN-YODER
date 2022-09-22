@@ -7,41 +7,37 @@
 
 using namespace std;
 
-void getWord()
+int main ()
 {
     
-    vector<char> charVector({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
+    vector<char> stringVector({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
     string text;
     string outPut = "";
     cout << "Input text to cypher: ";
     getline(cin, text);
-    int position = 0;
+    int number = 0;
 
     for (int i = 0; i < text.length(); i++)
     {
-        int position = 0;
-        position = (int)text.at(i);
+        int number = 0;
+        number = (int)text.at(i);
 
         if (text.at(i) >= 65 && text.at(i) <= 90) // is a capital letter
         {
-            //position = (int)text.at(i);
-            outPut.push_back(charVector[position - 65]); // IN CODE TABLE
+            
+            outPut.push_back(stringVector[number - 65]); // IN CODE TABLE
         }
 
         else if (text.at(i) >= 97 && text.at(i) <= 122) // is a lower case letter
         {
-            //position = (int)text.at(i);
-            outPut.push_back(tolower(charVector[position - 97]));
+            
+            outPut.push_back(tolower(stringVector[number - 97])); // converts code back to lower case
         }
 
-        else outPut.push_back(position);
+        else outPut.push_back(number); // is not letter
 
     }
     cout << "Encoded Message: " << '\"' << outPut << '\"';
-}
-int main()
-{
-    getWord();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
